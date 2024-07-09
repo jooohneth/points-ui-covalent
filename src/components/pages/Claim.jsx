@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { CardTitle, CardContent } from "@/components/ui/card";
+import { CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const Claim = ({
   claimed,
@@ -11,16 +12,24 @@ const Claim = ({
   isConfirmed,
   error,
 }) => {
+  useEffect(() => {
+    console.log(error?.message);
+  }, [error]);
+
   return (
     <div>
       <CardContent>
         <CardTitle>
           {claimed
             ? "Already Claimed!"
-            : error?.shortMessage.includes("Invalid proof!")
+            : error?.message.includes("Invalid proof!")
             ? "Not Eligible!"
             : "Get Powder"}
         </CardTitle>
+
+        <CardDescription>
+          Check your eligibility and Claim Powder.
+        </CardDescription>
 
         <Button
           disabled={isPending || isConfirming || (claimed ? true : false)}

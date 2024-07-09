@@ -70,21 +70,21 @@ const Home = () => {
   };
 
   const claimPoints = () => {
-    // writeContract({
-
-    //   abi: abi,
-    //   functionName: "claim",
-    //   args: [proof, account.address],
-    // });
-
     writeContract({
       address: "0xdF9f2829D17bB0850Ce18e48aE2F02bc521F302A",
       abi: abi,
-      functionName: "modifyRoot",
-      args: [
-        "0x31dde0d57dac2e4b49ff12b1e68379854fe475d3da08b2b4537318f12bf2d79c",
-      ],
+      functionName: "claim",
+      args: [proof, account.address],
     });
+
+    // writeContract({
+    //   address: "0xdF9f2829D17bB0850Ce18e48aE2F02bc521F302A",
+    //   abi: abi,
+    //   functionName: "modifyRoot",
+    //   args: [
+    //     "0x31dde0d57dac2e4b49ff12b1e68379854fe475d3da08b2b4537318f12bf2d79c",
+    //   ],
+    // });
   };
 
   const { isLoading: isConfirming, isSuccess: isConfirmed } =

@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "transition-all duration-300 bg-white text-zinc-900 border-2 border-zinc-900 hover:bg-zinc-900 hover:text-white dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90",
+          "rounded-md transition-all duration-300 bg-white text-zinc-900 border-2 border-zinc-900 hover:bg-zinc-900 hover:text-white dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90",
         destructive:
           "bg-red-500 text-zinc-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-zinc-50 dark:hover:bg-red-900/90",
         outline:

@@ -1,7 +1,7 @@
 import { CovalentClient } from "@covalenthq/client-sdk";
 
-const queryHolders = async () => {
-  const client = new CovalentClient("cqt_rQC4gWvTkdYp9pTPmqPBkDkxtDMQ"); // replace with your Covalent API Key
+const queryHolders = async (key) => {
+  const client = new CovalentClient(key);
   let tempArr = [];
 
   try {

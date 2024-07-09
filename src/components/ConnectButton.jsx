@@ -36,8 +36,12 @@ const ConnectWallet = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <Button onClick={openConnectModal} type="button">
-                    Connect Wallet
+                  <Button
+                    className="mt-10"
+                    onClick={openConnectModal}
+                    type="button"
+                  >
+                    Connect
                   </Button>
                 );
               }
